@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Billboard</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-size: 78px;
+            text-align: center;
+            padding-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="time">Loading...</div>
+
+    <script>
+        function updateTime() {
+            var timeElement = document.getElementById("time");
+            var currentTime = new Date();
+            var formattedTime = currentTime.toLocaleTimeString();
+            timeElement.innerText = formattedTime;
+        }
+
+        // Call updateTime initially and then every second (1000 milliseconds)
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
